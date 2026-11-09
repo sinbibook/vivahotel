@@ -1,0 +1,42 @@
+<footer class="footer" id="footer">
+  <div class="w1440">
+    <!-- MAPPER: homepage.customFields.property.name 또는 고정 슬로건 텍스트 -->
+    <div class="tx1" data-footer-slogan>
+      지금 바로  함께해 보세요.
+    </div>
+    <!-- MAPPER: property.contactPhone -->
+    <div class="tx2" data-footer-phone></div>
+    <!-- data-* 속성 : data-footer-rural-stay-mark-wrap (customFields.footer.ruralStayMarks 또는 기존 ruralStayMark 가 있을 때만 노출, 기본 숨김)
+         data-footer-rural-stay-mark : 농어촌민박사업자 이미지 (표시마크 + 신고번호, alt = description) -->
+    <div class="ruralStayMarkWrap" data-footer-rural-stay-mark-wrap style="display: none">
+      <img class="ruralStayMark" src="" alt="농어촌민박사업자" data-footer-rural-stay-mark />
+      <img class="ruralStayMark" src="" alt="농어촌민박사업자" data-footer-rural-stay-mark />
+    </div>
+    <div class="tx3">
+      <!-- MAPPER: property.businessInfo.* 조합 -->
+      <span data-footer-business-info></span>
+      <br /><br />
+      <!-- copyright : property.tripProviderName 으로 치환 (data-copyright), 값이 없으면 아래 문구 유지 -->
+      <span data-copyright="COPYRIGHT©{provider}. ALL RIGHTS RESERVED.">COPYRIGHT&copy;트립일레븐. ALL RIGHTS RESERVED.</span>
+    </div>
+  </div>
+
+<!-- 우측 하단 플로팅 버튼 2개. 상담하기(아래) + 예약하기(위) 순으로 쌓인다.
+     예약하기는 `for_m` 이라 모바일에서만 뜨고, 상담하기는 총판A + tripPropertyId 가
+     있을 때 전 화면폭에서 뜬다 (header-footer-mapper.mapConsult). -->
+
+<!-- data-* 속성 : data-consult-button (property.tripPropertyId + partnerType)
+     상담 URL 은 `https://www.bookingplay.co.kr/api/cti_eicn/kakao_happy_talk?tid={tripPropertyId}` -->
+<div id="talk_custom_button" data-consult-wrap>
+  <a title="상담하기" href="#!" target="_blank" data-consult-button>
+    <img src="images/consult.png" alt="상담하기" />
+  </a>
+</div>
+
+<!-- data-* 속성 : data-booking-link (property.realtimeBookingId) -->
+<div class="ft_btn_reserve for_m on">
+  <a title="예약하기" href="#!" target="_blank" data-booking-link>
+    <img src="images/talk.png" alt="예약하기" />
+  </a>
+</div>
+</footer>
